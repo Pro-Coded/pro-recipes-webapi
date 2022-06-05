@@ -1,4 +1,4 @@
-namespace ProRecipesWebAPI.Tests;
+namespace Pro.Recipes.WebAPI.Tests;
 
 public class UnitTest1
 {
