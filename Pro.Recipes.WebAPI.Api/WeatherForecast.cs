@@ -1,4 +1,4 @@
-namespace ProRecipesWebAPI.Api;
+namespace Pro.Recipes.WebAPI.Api;
 
 public class WeatherForecast
 {

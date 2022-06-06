@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using Serilog;
 
-namespace ProRecipesWebAPI.Api.Controllers;
+namespace Pro.Recipes.WebAPI.Api.Controllers;
 [ApiController]
 [Route("[controller]")]
 public class WeatherForecastController : ControllerBase
@@ -20,7 +19,7 @@ public class WeatherForecastController : ControllerBase
 
     [HttpGet(Name = "GetWeatherForecast")]
     public async Task<IEnumerable<WeatherForecast>> Get()
-    {       
+    {
         var forecast = Enumerable.Range(1, 5).Select(index => new WeatherForecast
         {
             Date = DateTime.Now.AddDays(index),
@@ -28,9 +27,7 @@ public class WeatherForecastController : ControllerBase
             Summary = Summaries[Random.Shared.Next(Summaries.Length)]
         })
         .ToArray();
-
-        _logger.LogInformation("This is the weather {@forecasts}", forecast);
-
+        
         return forecast;
     }
 }
