@@ -27,9 +27,7 @@ public class WeatherForecastController : ControllerBase
             Summary = Summaries[Random.Shared.Next(Summaries.Length)]
         })
         .ToArray();
-
-        _logger.LogInformation("This is the weather {@forecasts}", forecast);
-
+        
         return forecast;
     }
 }
