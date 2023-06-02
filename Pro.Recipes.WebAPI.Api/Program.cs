@@ -1,5 +1,3 @@
-using Hellang.Middleware.ProblemDetails;
-using Microsoft.Extensions.Options;
 using Serilog;
 
 Log.Logger = new LoggerConfiguration()
@@ -28,10 +26,11 @@ try
     {
         app.UseSwagger();
         app.UseSwaggerUI();
+        app.UseDeveloperExceptionPage();
     }
     
     app.UseSerilogRequestLogging();
-    app.UseProblemDetails();
+
     app.UseHttpsRedirection();
     app.UseAuthorization();
     app.MapControllers();
