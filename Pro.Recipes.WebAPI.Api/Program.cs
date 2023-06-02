@@ -1,4 +1,3 @@
-// using Hellang.Middleware.ProblemDetails;
 using Serilog;
 
 Log.Logger = new LoggerConfiguration()
