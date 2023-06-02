@@ -16,7 +16,7 @@ public class WeatherForecastController : ControllerBase
     {
         _logger = logger;
     }
-
+    
     [HttpGet(Name = "GetWeatherForecast")]
     public async Task<IEnumerable<WeatherForecast>> Get()
     {
